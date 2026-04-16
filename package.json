@@ -11,7 +11,8 @@
     "lint": "eslint src/**/*.ts",
     "format": "prettier --write src/**/*.ts",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [
     "pixel-art",
@@ -42,6 +43,10 @@
     "testMatch": [
       "**/__tests__/**/*.ts",
       "**/*.test.ts"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/index.ts"
     ]
   }
 }
